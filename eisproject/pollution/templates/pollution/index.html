@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html>
+
+  {% load staticfiles %}
+
+<title>AMPHIBIOUS BOT</title>
+
+
+<style>
+
+
+
+
+
+#awan {
+
+top:0px;left:0px;
+width:100%;
+height:100%;
+text-align:center;
+margin:0px;
+padding:0px;
+background: url(dims.jpg) no-repeat;
+  background-size: 50%;
+padding-top:100px;
+padding-bottom:10px;
+  width: 100%;
+  height: 635px;
+  animation: awan-animasi 10s linear infinite;
+  -ms-animation: awan-animasi 10s linear infinite;
+  -moz-animation: awan-animasi 10s linear infinite;
+  -webkit-animation: awan-animasi 10s linear infinite;
+}
+
+.mySlides {display:none;}
+
+@keyframes awan-animasi {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  };
+}
+
+@-webkit-keyframes awan-animasi {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  };
+}
+
+@-ms-keyframes awan-animasi {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  };
+}
+
+@-moz-keyframes awan-animasi {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  };
+}
+
+ th, td {
+    border: 1px solid black;
+    padding: 5px;
+    width: 50%;
+}
+table {
+    border-spacing: 15px;
+}
+
+</style>
+
+<script>
+
+  var arr1=[];
+  {% for i in turb %}
+    arr1.push({{i.turbidity_value}});
+  {% endfor %}
+
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
+ <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Location</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+
+
+  <a href="detail.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Temp_Graph</a>
+  <a href="map3.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Heat Map</a>
+
+
+
+
+<a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
+
+
+
+    </div>
+  </div>
+
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+ <a href="detail.html" class="w3-bar-item w3-button">Temp_Graph</a>
+
+<a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
+
+ </div>
+</div>
+
+<!-- Image Header -->
+<br>
+<br>
+<center><h1>AMPHIBIOUS BOT</h1></center>
+<div class="w3-display-container w3-animate-opacity" style="height: 400px">
+  <div class="w3-content w3-section" style="max-width:600px">
+  <img class="mySlides w3-animate-right" src="https://cdn.instructables.com/FNN/9Y9F/JCKUF33E/FNN9Y9FJCKUF33E.LARGE.jpg?width=800&crop=3:2" style="width:100%; height:350px;">
+  <img class="mySlides w3-animate-right" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqiutBmTuZarwzzR8V_yIIHVFfvPp0rM-GvGgsyjfRYRa4sypb" style="width:100%; height:350px;">
+  <img class="mySlides w3-animate-right" src="https://o.aolcdn.com/images/dims?quality=100&image_uri=http%3A%2F%2Fwww.blogcdn.com%2Fwww.engadget.com%2Fmedia%2F2010%2F07%2Faqua201.jpg&client=cbc79c14efcebee57402&signature=9e8580da3929f7e600bebd519511a87a78bdd919" style="width:100%; height:350px;">
+  <img class="mySlides w3-animate-right" src="https://www.roboticastreet.com/wp-content/uploads/2010/07/Aqua2.jpg" style="width:100%; height:350px;">
+</div>
+
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+<center>
+<br>
+<!-- Team Container -->
+<!--  bbbbbbbbbbbbbbbbb- -->
+
+
+   <iframe height="300px" width="60%" src="graph1.html" name="iframe_a" ></iframe>
+   <p><a href="http://smgroup16.pythonanywhere.com/pollution/graph1" target="iframe_a" id="demo">Turbidity Graph</a></p>
+   <p><a href="http://smgroup16.pythonanywhere.com/pollution/graph2" target="iframe_a" id="demo">pH Value</a></p>
+   <p><a href="http://smgroup16.pythonanywhere.com/pollution/graph3" target="iframe_a" id="demo">Flow</a></p>
+
+
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>OUR TEAM</h2>
+<p>Meet the team</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+    <h3>Padmini Chennamsetty</h3>
+
+</div>
+
+<div class="w3-quarter">
+    <h3>Keerthi Lam</h3>
+
+</div>
+<div class="w3-quarter">
+    <h3>Dharani</h3>
+
+</div>
+<div class="w3-quarter">
+    <h3>Nitin</h3>
+
+</div>
+
+
+<div class="w3-quarter">
+
+  <h3>Soumik</h3>
+
+</div>
+
+<div class="w3-quarter">
+  <h3>Mrityunjay</h3>
+
+</div>
+
+</div>
+</div>
+
+<!-- Work Row -->
+
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div >
+<center><h2 style="color:white;">Our Work</h2></center>
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<h2 class="w3-center" style="color:white;">AMPHIBIOUS BOT</h2>
+<div class="w3-content w3-section" style="max-width:100%;max-height:50%">
+
+  <img class="mySlides" src="pro1.jpg" style="width:100%;min-height:350px;max-height:500px;">
+<center>
+<img class="mySlides" src="pro2.jpg" style="width:50%;max-height:500px;">
+  </center>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+function setProgress(elem, percent) {
+  var degrees = percent * 3.6, transform = /MSIE 9/.test(navigator.userAgent) ? 'msTransform' : 'transform';
+  elem.querySelector('.counter').setAttribute('data-percent', Math.round(percent));
+  elem.querySelector('.progressEnd').style[transform] = 'rotate(' + degrees + 'deg)';
+  elem.querySelector('.progress').style[transform] = 'rotate(' + degrees + 'deg)';
+  if(percent >= 50 && !/(^|\s)fiftyPlus(\s|$)/.test(elem.className))
+    elem.className += ' fiftyPlus';
+}
+
+(function() {
+  var elem = document.querySelector('.circlePercent'),percent = 0;
+  (function animate() {
+    setProgress(elem, (percent += .25));
+    if(percent < 75)
+      setTimeout(animate, 15);
+  })();
+})();
+</script>
+<br>
+<p>
+Amphibious bot:
+
+  Automatic mechanical robots can perform tasks in different environmental conditions that are tedious, monotonous and sometimes hazardous for human beings. These robots can help in mitigating the risk to precious human lives, and also function as substitute for humans to perform some routine, and arduous tasks that need long hours. A Multimodal Smart Amphibot (MSA) proposed is an example of such robot, which can be immensely useful in weather monitoring applications. In this , a prototype MSA is developed for collecting the environment and weather data, in both land and water bodies, including the places that may be difficult to approach by humans. The prototype MSA gathers the environmental and weather data using a range of sensors. The collected data is then transmitted to the base station using either wifi module, onboard this MSA. Commands to the amphibot, from the remote-control station or controller, can also be sent through DTMF or Bluetooth, depending upon the distance.Collected data from the sensors can also be sent back to this Android based smart phone, using DTMF or Bluetooth. Performance evaluation is carried out to measure the limits of operation under several challenging conditions. The proposed amphibot MSA can have a range of potential applications in environment monitoring, both at land and water-bodies, especially in smart cities.
+
+About Turbidity Sensors:
+
+  Turbidity sensors measure the amount of light that is scattered by the suspended solids in water. As the amount of total suspended solids (TSS) in water increases, the waters turbidity level (and cloudiness or haziness) increases. Turbidity sensors are used in river and stream gaging, wastewater and effluent measurements, control instrumentation for settling ponds, sediment transport research, and laboratory measurements.
+
+Water Level Sensors:
+
+  Level sensors are used to detect the level of substances that can flow. Such substances include liquids, slurries, granular material and powders. ... Such meaurements can be used to determine the amount of materials within a closed container or the flow of water in open channels.
+
+Temperature sensors:
+
+  They provide precise, easy thermal monitoring and protection. From thermistor replacement to IR thermopile, browse local analog, digital, remote and multi-channel temperature sensors.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Sricity, Chittor</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +91 7730926487</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge">
+      </i>    padmini.c16@iiits.in</p>
+
+  <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge">
+      </i>    keerthi.l16@iiits.in</p>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+</body>
+
+</html>

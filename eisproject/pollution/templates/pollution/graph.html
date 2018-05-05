@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script  type="text/javascript">
+window.onload = function (arr) {
+graph1("Turbidity",arr1);
+}
+</script>
+
+<script>
+  // ;
+	function graph1(paraSF,arr) {
+			var chart = new CanvasJS.Chart("chartContainer", {
+			
+			animationEnabled: true,
+			theme: "light2",
+			title:{
+				text: paraSF
+			},
+			axisY:{
+				includeZero: false
+			},
+			data: [{        
+				type: "line",       
+				dataPoints: [
+					 { y: arr[0] },
+					 { y: arr[1] },
+					 { y: arr[2] },
+					 { y: arr[3] },
+					 { y: arr[4] },
+					 { y: arr[5] },
+					 { y: arr[6] },
+					 { y: arr[7] },
+					 { y: arr[8] },
+					 { y: arr[9] },
+					 { y: arr[10] },
+					 { y: arr[11] }
+					
+				]
+			}]
+			});
+			chart.render();				
+		}
+		
+</script>
+
+<script>
+
+	var arr1=[];
+	{% for i in turb %}
+		arr1.push({{i.turbidity_value}});
+	{% endfor %}
+
+</script>
+</head>
+<body>
+<div align="center"><div id="chartContainer" style="width: 50%; height: 300px;" align="centre"></div></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
